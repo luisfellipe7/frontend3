@@ -1,21 +1,30 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 import imgfeed from "../assets/img2.png";
 
 const FeedbackBody = styled.div`
   display: flex;
   flex-direction: row;
   margin-left: 100px;
+  @media (max-width: 768px) {
+    width: 768px;
+  }
 `;
 
 const FeedbackIMG = styled.img`
   width: 100%;
+  height: 500px;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const TextoFeed = styled.div`
   display: flex;
   flex-direction: column;
-  margin-right: 326px;
+  margin-right: 30px;
+  margin-bottom:30px;
+  justify-content: center;
 `;
 
 const TextoTitle = styled.div`
@@ -25,6 +34,10 @@ const TextoTitle = styled.div`
   line-height: 38.4px;
   text-align: left;
   color: #666;
+  margin-bottom: 10px;
+  @media (max-width: 768px) {
+    font-size: 22px;
+  }
 `;
 
 const TextoBody = styled.div`
@@ -32,12 +45,15 @@ const TextoBody = styled.div`
   font-weight: normal;
   font-size: 32px;
   line-height: 38.4px;
-  text-align: right;
+  text-align: left;
   color: #666;
+  @media (max-width: 768px) {
+    font-size: 22px;
+  }
 `;
 
 const FeedSub = styled.div`
-  margin-top: 100px;
+  margin-top: 70px;
   display: flex;
   flex-direction: row;
 `;
@@ -51,39 +67,53 @@ const EmailFeed = styled.input`
   font-family: Lato;
   font-weight: normal;
   font-style: italic;
-  font-size: 32px;
+  font-size: 26px;
   line-height: 38.4px;
-  text-align: right;
+  text-align: center;
   color: #666;
   opacity: 0.58;
+  text-align: left;
+  @media (max-width: 768px) {
+    font-size: 22px;
+  }
 `;
 
 const EmailButton = styled.button`
-  width: 125px;
-  height: 67px;
+  width: 140px;
+  height: 50px;
+  border-radius: 8px;
   background: #9d65a4;
+  position: relative;
   border: 1px solid #b7b7b7;
+  font-family: Lato;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 38.4px;
+  text-align: center;
+  color: #fefefe;
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
 `;
 
 const Feedback = () => {
-    return(
-        <FeedbackBody>
-        <FeedbackIMG src={imgfeed} />
-        <TextoFeed>
-          <TextoTitle>Quer um Feedback?</TextoTitle>
-          <TextoBody>
-            Preencha seu email abaixo para receber o feedback da sua
-            avaliação.
-            <br />
-            Estamos torcendo por você!
-          </TextoBody>
-          <FeedSub>
-            <EmailFeed placeholder="Digite seu email aqui..." />
-            <EmailButton />
-          </FeedSub>
-        </TextoFeed>
-      </FeedbackBody>
-    )
-}
+  return (
+    <FeedbackBody>
+      <FeedbackIMG src={imgfeed} />
+      <TextoFeed>
+        <TextoTitle>Quer um Feedback?</TextoTitle>
+        <TextoBody>
+          Preencha seu email abaixo para receber o feedback da sua avaliação.
+          <br />
+          Estamos torcendo por você!
+        </TextoBody>
+        <FeedSub>
+          <EmailFeed placeholder="Digite seu email aqui..." />
+          <EmailButton>ENVIAR</EmailButton>
+        </FeedSub>
+      </TextoFeed>
+    </FeedbackBody>
+  );
+};
 
-export default Feedback
+export default Feedback;

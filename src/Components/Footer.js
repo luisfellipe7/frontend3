@@ -8,15 +8,23 @@ import youtube from '../assets/youtube.png'
 const FooterBG = styled.div`
   display: flex;
   justify-content:center;
+  align-items:center;
   width: 100%;
   height: 500px;
   background: #685c82;
+  @media (max-width: 768px) {
+    width:768px;
+  }
 `;
 const Texto = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 820px;
+  margin-right:50px;
+  @media (max-width: 768px) {
+    width:600px;
+  }
 `;
 
 const FimTexto = styled.div`
@@ -25,6 +33,10 @@ const FimTexto = styled.div`
   line-height: 38.4px;
   text-align: left;
   color: #fff;
+  @media (max-width: 768px) {
+    font-size: 18px;
+    padding-left:20px
+  }
 `;
 
 const Icones =styled.div`
@@ -34,8 +46,8 @@ justify-content:center;
 `
 const Img = styled.img`
 display:flex;
-width:37px;
-height:37px;
+width:30px;
+height:30px;
 margin-right:10px;
 `
 
@@ -51,8 +63,6 @@ const Footer = () => {
           como material de estudo da equipe de inovação do Grupo Comunique-se.
         </FimTexto>
         <br /> 
-        <br />
-        <br />
         <br />
         <br />
         <FimTexto><b>IMPORTANTE:</b> Não compartilhe esse teste.</FimTexto>

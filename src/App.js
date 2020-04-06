@@ -14,6 +14,12 @@ const Header = styled.div`
   margin-left: 150px;
   margin-right: 150px;
   margin-top: 21px;
+  @media (max-width: 768px) {
+    display:flex;
+    justify-content:center;
+    margin-left:5%;
+    margin-top:15px;
+  }
 `;
 
 const Strip = styled.div`
@@ -55,13 +61,19 @@ const Logo = styled.div`
   line-height: 38.4px;
   text-align: left;
   color: #918fb3;
+  @media (max-width: 768px) {
+    text-align:center;
+  }
 `;
 
 const Menu = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  margin-top: 10px;
+  margin-top: 10px; 
+   @media (max-width: 768px) {
+    display:none;
+  }
 `;
 
 const Items = styled.div`
@@ -74,17 +86,27 @@ const Items = styled.div`
   text-align: left;
   color: #666;
   justify-content: center;
+  @media (max-width: 768px) {
+    display:none;
+  }
 `;
 
 const Body = styled.div`
   display: flex;
   flex-direction: column;
+  @media (max-width: 768px) {
+    justify-content:center;
+  }
 `;
 
 const ImgBG = styled.div`
   background-image: url(${imgbg});
   width: 100%;
-  height: 500px;
+  @media (max-width: 768px) {
+    display:flex;
+    justify-content:center;
+    background-image: none;
+  }
 `;
 
 const ImgText = styled.div`
@@ -101,6 +123,9 @@ const ImgText1 = styled.div`
   line-height: 72px;
   text-align: left;
   color: #666;
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
 `;
 
 const ImgText2 = styled.div`
@@ -111,6 +136,10 @@ const ImgText2 = styled.div`
   line-height: 72px;
   text-align: left;
   color: #666;
+  @media (max-width: 768px) {
+    font-size: 20px;
+    margin-left:2rem;
+  }
 `;
 
 const ImgText3 = styled.div`
@@ -120,6 +149,9 @@ const ImgText3 = styled.div`
   line-height: 72px;
   text-align: left;
   color: #666;
+  @media (max-width: 768px) {
+    font-size: 26px;
+  }
 `;
 
 const ImgText4 = styled.div`
@@ -130,6 +162,9 @@ const ImgText4 = styled.div`
   line-height: 72px;
   text-align: left;
   color: #666;
+  @media (max-width: 768px) {
+    font-size: 26px;
+  }
 `;
 
 const App = () => {
@@ -162,7 +197,7 @@ const App = () => {
               que vão <b>impactar</b> o mercado.
             </ImgText2>
             <ImgText3>
-              <b>Você está pronto</b> para{" "}
+              <b>Você está pronto</b> para
             </ImgText3>
             <ImgText4>
               <b>fazer parte desse time?</b>
