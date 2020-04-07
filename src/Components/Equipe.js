@@ -7,10 +7,22 @@ const Team = styled.div`
   flex-direction: row;
   width: 100%;
   justify-content: center;
+  @media (max-width: 1024px) {
+    padding-left:40%;
+  }
   @media (max-width: 768px) {
-      width:768px;
-    flex-wrap:wrap;
-    justify-content:center;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left:45%;
+  }
+  @media (max-width: 425px) {
+    width: 100%;
+    flex-direction:column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:center;
+    padding-left:35%;
   }
 `;
 
@@ -21,7 +33,13 @@ const TeamTitle = styled.div`
   line-height: 43.2px;
   text-align: center;
   color: #918fb3;
-
+  @media (max-width: 1024px) {
+    padding-left:40%;
+  }
+  @media (max-width:425px){
+      padding-left:35%;
+      text-align:center;
+  }
 `;
 
 const Row = styled.div`

@@ -12,8 +12,11 @@ const FooterBG = styled.div`
   width: 100%;
   height: 500px;
   background: #685c82;
-  @media (max-width: 768px) {
-    width:768px;
+  @media (max-width: 1024px) {
+    width: 138%;
+  }
+  @media (max-width: 320px) {
+    width: 158%;
   }
 `;
 const Texto = styled.div`

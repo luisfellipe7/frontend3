@@ -7,7 +7,11 @@ const FeedbackBody = styled.div`
   flex-direction: row;
   margin-left: 100px;
   @media (max-width: 768px) {
-    width: 768px;
+    padding-left:15%;
+  }
+  @media (max-width: 425px) {
+    width: 100%;
+    margin-left: 10px;
   }
 `;
 
@@ -23,7 +27,7 @@ const TextoFeed = styled.div`
   display: flex;
   flex-direction: column;
   margin-right: 30px;
-  margin-bottom:30px;
+  margin-bottom: 30px;
   justify-content: center;
 `;
 
@@ -50,12 +54,24 @@ const TextoBody = styled.div`
   @media (max-width: 768px) {
     font-size: 22px;
   }
+  @media (max-width: 425px) {
+    word-wrap: break-word;
+    font-size: 18px;
+  }
 `;
 
 const FeedSub = styled.div`
   margin-top: 70px;
   display: flex;
   flex-direction: row;
+  @media (max-width: 768px) {
+    padding-left:10%;
+  }
+  @media (max-width: 425px) {
+      margin-top:30px;
+    flex-direction:column;
+    align-items:center;
+  }
 `;
 
 const EmailFeed = styled.input`
@@ -94,6 +110,10 @@ const EmailButton = styled.button`
   @media (max-width: 768px) {
     font-size: 18px;
   }
+  @media (max-width: 425px) {
+    margin-top:10px;
+  }
+
 `;
 
 const Feedback = () => {

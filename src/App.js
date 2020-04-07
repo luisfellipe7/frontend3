@@ -1,9 +1,9 @@
 import React from "react";
-import Info from './Components/Info'
-import Feedback from './Components/Feedback'
-import Equipe from './Components/Equipe'
-import Gostou from './Components/Gostou'
-import Footer from './Components/Footer'
+import Info from "./Components/Info";
+import Feedback from "./Components/Feedback";
+import Equipe from "./Components/Equipe";
+import Gostou from "./Components/Gostou";
+import Footer from "./Components/Footer";
 import styled from "styled-components";
 import imgbg from "./assets/bg1.png";
 
@@ -15,10 +15,8 @@ const Header = styled.div`
   margin-right: 150px;
   margin-top: 21px;
   @media (max-width: 768px) {
-    display:flex;
-    justify-content:center;
-    margin-left:5%;
-    margin-top:15px;
+    margin-left: 5%;
+    margin-top: 15px;
   }
 `;
 
@@ -62,7 +60,7 @@ const Logo = styled.div`
   text-align: left;
   color: #918fb3;
   @media (max-width: 768px) {
-    text-align:center;
+    text-align: center;
   }
 `;
 
@@ -70,9 +68,9 @@ const Menu = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  margin-top: 10px; 
-   @media (max-width: 768px) {
-    display:none;
+  margin-top: 10px;
+  @media (max-width: 768px) {
+    display: none;
   }
 `;
 
@@ -87,7 +85,7 @@ const Items = styled.div`
   color: #666;
   justify-content: center;
   @media (max-width: 768px) {
-    display:none;
+    display: none;
   }
 `;
 
@@ -95,16 +93,19 @@ const Body = styled.div`
   display: flex;
   flex-direction: column;
   @media (max-width: 768px) {
-    justify-content:center;
+    justify-content: center;
   }
 `;
 
 const ImgBG = styled.div`
   background-image: url(${imgbg});
   width: 100%;
+  @media (max-width: 1024px) {
+    width: 138%;
+  }
   @media (max-width: 768px) {
-    display:flex;
-    justify-content:center;
+    display: flex;
+    justify-content: center;
     background-image: none;
   }
 `;
@@ -138,7 +139,7 @@ const ImgText2 = styled.div`
   color: #666;
   @media (max-width: 768px) {
     font-size: 20px;
-    margin-left:2rem;
+    margin-left: 2rem;
   }
 `;
 
